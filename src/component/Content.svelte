@@ -7,6 +7,12 @@
     let numberOfRow = '4';
     let numberOfColumn = '4';
     let matrix = new Matrix(Number(numberOfRow), Number(numberOfColumn));
+    let memory = {
+        queries,
+        numberOfRow,
+        numberOfColumn,
+        matrix
+    };
 
     function onInitializeMatrix(event) {
         matrix = new Matrix(Number(numberOfRow), Number(numberOfColumn));
@@ -20,6 +26,19 @@
 
     function onExecuteQuery(event) {
         matrix = matrix.execute(queries.split('\n'));
+    }
+
+    function onSave() {
+        memory = {
+            queries,
+            numberOfRow,
+            numberOfColumn,
+            matrix
+        };
+    }
+
+    function onLoadSave() {
+        ({ queries, numberOfRow, numberOfColumn, matrix } = memory);
     }
 </script>
 
@@ -37,8 +56,8 @@
         width: 100%;
     }
 
-    h5 {
-        margin-top: 12px;
+    button {
+        margin-bottom: 12px;
     }
 </style>
 
@@ -64,6 +83,18 @@
                 <div class="col-12">
                     <button class="col-12 btn btn-success" on:click={onInitializeMatrix}>
                         Initialize Matrix
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <button class="col-12 btn btn-sm btn-dark" on:click={onSave}>
+                        Save
+                    </button>
+                </div>
+                <div class="col-6">
+                    <button class="col-12 btn btn-sm btn-dark" on:click={onLoadSave}>
+                        Load Save
                     </button>
                 </div>
             </div>
