@@ -11,7 +11,7 @@
         queries,
         numberOfRow,
         numberOfColumn,
-        matrix
+        matrix: matrix.clone()
     };
 
     function onInitializeMatrix(event) {
@@ -33,7 +33,7 @@
             queries,
             numberOfRow,
             numberOfColumn,
-            matrix
+            matrix: matrix.clone()
         };
     }
 
