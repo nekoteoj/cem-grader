@@ -63,10 +63,10 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-8">
+        <div class="col-12 col-md-8">
             <MatrixDisplay matrix={matrix} on:update={onUpdateMatrixEntry} />
         </div>
-        <div class="col-4">
+        <div class="col-12 col-md-4">
             <div class="row">
                 <div class="input-group mb-3 col-6">
                     <div class="input-group-prepend">
