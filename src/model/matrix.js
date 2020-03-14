@@ -62,7 +62,7 @@ class Matrix {
             }
             cloneData.push(cloneRow);
         }
-        const cloneMatrix = new Matrix(this.numberOfRow, this.numberOfRow, this.numberOfAugCol);
+        const cloneMatrix = new Matrix(this.numberOfRow, this.numberOfCol, this.numberOfAugCol);
         cloneMatrix.data = cloneData;
         return cloneMatrix;
     }
