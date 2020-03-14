@@ -16,7 +16,10 @@ class Fraction {
     }
 
     convertToLeastFraction() {
-        const minValue = Math.min(this.numerator, this.denominator);
+        const minValue = Math.min(
+            Math.abs(this.numerator),
+            Math.abs(this.denominator)
+        );
         // Divide by GCD
         for (let i = minValue; i >= 2; i--) {
             if (this.numerator % i === 0 && this.denominator % i === 0) {
