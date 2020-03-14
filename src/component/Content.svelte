@@ -94,7 +94,7 @@
                 </div>
                 <div class="col-6">
                     <button class="col-12 btn btn-sm btn-dark" on:click={onLoadSave}>
-                        Load Save
+                        Load Saved
                     </button>
                 </div>
             </div>
