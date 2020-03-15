@@ -38,7 +38,8 @@
     }
 
     function onLoadSave() {
-        ({ queries, numberOfRow, numberOfColumn, matrix } = memory);
+        ({ queries, numberOfRow, numberOfColumn } = memory);
+        matrix = memory.matrix.clone();
     }
 </script>
 
